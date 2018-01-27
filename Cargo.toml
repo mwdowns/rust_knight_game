@@ -1,0 +1,7 @@
+[package]
+name = "knight_game"
+version = "0.1.0"
+authors = ["Matthew Downs <mwdowns@gmail.com>"]
+
+[dependencies]
+rand = "0.3.14"
