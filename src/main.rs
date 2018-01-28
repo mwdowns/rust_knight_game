@@ -1,6 +1,7 @@
 extern crate rand;
 
 use std::io;
+mod play_game;
 // use std::cmp::Ordering;
 // use rand::Rng;
 
@@ -14,24 +15,10 @@ fn main() {
         .expect("must be a string");
     println!("You chose: {}", answer);
     match answer.trim().to_uppercase().as_ref() {
-        "Y" => play_game(),
+        "Y" => play_game::play_game(),
         "N" => exit_game(),
         _ => bad_choice(),
     }
-}
-
-fn play_game() {
-    println!("Playing game");
-
-    struct Player {
-        name: String,
-        class: String,
-        hp: u32,
-        strenght: u32,
-        speed: u32,
-        dead: bool,
-    };
-    
 }
 
 fn exit_game() {
