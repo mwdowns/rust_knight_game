@@ -13,7 +13,7 @@ fn main() {
     io::stdin().read_line(&mut answer)
         .expect("must be a string");
     println!("You chose: {}", answer);
-    match answer.trim().as_ref() {
+    match answer.trim().to_uppercase().as_ref() {
         "Y" => play_game(),
         "N" => exit_game(),
         _ => bad_choice(),
@@ -22,6 +22,16 @@ fn main() {
 
 fn play_game() {
     println!("Playing game");
+
+    struct Player {
+        name: String,
+        class: String,
+        hp: u32,
+        strenght: u32,
+        speed: u32,
+        dead: bool,
+    };
+    
 }
 
 fn exit_game() {
